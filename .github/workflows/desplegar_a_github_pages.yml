@@ -10,6 +10,7 @@ permissions:
   id-token: write
 env:
   DEPLOY_BASE_URL: ${{ vars.DEPLOY_BASE_URL}}
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 concurrency:
   group: "pages"
   cancel-in-progress: true
