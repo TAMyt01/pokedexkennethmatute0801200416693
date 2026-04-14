@@ -29,9 +29,9 @@ jobs:
         with:
           node-version: '24'
       - name: Instalar las Dependencias del Proyecto
-        run: npm ci
+        run: npm install --legacy-peer-deps
       - name: Compilar la página para distribución
-        run: npx --yes vite build
+        run: npm run build --force
       - name: Configura Github Pages
         uses: actions/configure-pages@v5
       - name: Subir los compilados (artefactos) a GP
